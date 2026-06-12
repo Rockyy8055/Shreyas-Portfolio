@@ -1122,83 +1122,156 @@ a {
   .site-header {
     top: 18px;
     width: 100%;
-    padding: 0 18px;
+    grid-template-columns: auto auto;
+    row-gap: 8px;
+    justify-content: space-between;
+    padding: 0 14px;
+  }
+
+  .site-header nav {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .site-header nav button {
+    padding: 2px 0;
+    font-size: 0.62rem;
   }
 
   .logo {
-    font-size: 1.35rem;
+    font-size: 1.12rem;
   }
 
   .hire-btn {
     min-height: 42px;
-    max-width: 168px;
+    max-width: 152px;
     padding: 0 14px;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
   }
 
   .hero {
     min-height: 100svh;
   }
 
+  .hero-background-video {
+    inset: auto;
+    top: 16%;
+    left: 56%;
+    width: auto;
+    min-width: 100%;
+    height: 74%;
+    object-fit: contain;
+    object-position: center;
+    transform: translateX(-50%);
+  }
+
+  .hero::before,
+  .hero::after {
+    width: 34vw;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(153, 17, 0, 0.56) 0%,
+      rgba(153, 17, 0, 0.24) 58%,
+      rgba(153, 17, 0, 0) 100%
+    );
+  }
+
+  .hero::after {
+    background: linear-gradient(
+      270deg,
+      rgba(111, 9, 0, 0.56) 0%,
+      rgba(111, 9, 0, 0.24) 58%,
+      rgba(111, 9, 0, 0) 100%
+    );
+  }
+
   .hero-content {
-    align-items: flex-end;
-    padding: 96px 18px 112px;
+    align-items: center;
+    padding: 132px 16px 92px;
   }
 
   .hero-copy {
-    max-width: 100%;
+    max-width: 58vw;
   }
 
   .hero-kicker {
-    font-size: clamp(2.25rem, 11vw, 3.25rem);
+    font-size: 1.75rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.45rem, 15.5vw, 5rem);
+    font-size: 2.62rem;
   }
 
   .hero-role {
-    font-size: clamp(1.22rem, 6vw, 1.7rem);
+    margin-top: 8px;
+    font-size: 0.98rem;
   }
 
   .hero-copy p {
-    max-width: 330px;
-    font-size: 1.05rem;
+    max-width: 230px;
+    margin-top: 16px;
+    font-size: 0.82rem;
+    line-height: 1.38;
   }
 
   .hero-actions {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
   }
 
   .btn {
-    width: 100%;
+    width: auto;
+    min-height: 38px;
+    gap: 7px;
+    padding: 0 12px;
+    font-size: 0.72rem;
+  }
+
+  .btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-outline {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0.72rem;
   }
 
   .hero-reel-controls {
-    right: 20px;
-    bottom: 22px;
-    gap: 12px;
+    right: 14px;
+    bottom: 18px;
+    gap: 8px;
   }
 
   .hero-play-reel {
-    gap: 8px;
-    font-size: 0.78rem;
+    gap: 6px;
+    font-size: 0.62rem;
   }
 
   .hero-play-circle {
-    width: 62px;
-    height: 62px;
+    width: 52px;
+    height: 52px;
   }
 
   .hero-audio-toggle {
-    gap: 7px;
-    font-size: 0.68rem;
+    gap: 6px;
+    font-size: 0.58rem;
   }
 
   .hero-audio-circle {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
   }
 
   .about,
